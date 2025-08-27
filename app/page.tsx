@@ -22,6 +22,7 @@ import {
 import { motion, useScroll, useTransform } from "framer-motion"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
+import Link from "next/link"
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll()
@@ -87,20 +88,24 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              <Button
-                size="lg"
-                className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
-              >
-                Apply for Business Loan
-                <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg border-2 hover:bg-primary/5 bg-transparent"
-              >
-                Explore Investment Portfolio
-              </Button>
+              <Link href="/loans/business-loan-application">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
+                >
+                  Apply for Business Loan
+                  <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
+                </Button>
+              </Link>
+              <Link href="/wealth-management">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg border-2 hover:bg-primary/5 bg-transparent"
+                >
+                  Explore Investment Portfolio
+                </Button>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -431,20 +436,24 @@ export default function HomePage() {
               important financial decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
-              >
-                Apply for Business Loan
-                <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg border-2 bg-transparent"
-              >
-                Schedule Private Consultation
-              </Button>
+              <Link href="/loans/business-loan-application">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
+                >
+                  Apply for Business Loan
+                  <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
+                </Button>
+              </Link>
+              <Link href="/schedule-private-consultation">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg border-2 bg-transparent"
+                >
+                  Schedule Private Consultation
+                </Button>
+              </Link>
             </div>
             <p className="text-sm text-muted-foreground px-4">
               Services intended solely for Accredited Investors, Institutional, and Sophisticated Investors

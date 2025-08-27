@@ -18,6 +18,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
     { href: "/", label: "Home" },
     { href: "/wealth-management", label: "Wealth Management" },
     { href: "/project-funding", label: "Project Funding" },
+    { href: "/loans", label: "Business Loans" },
     { href: "/testimonials", label: "Testimonials" },
     { href: "/contact", label: "Contact" },
   ]
@@ -55,12 +56,12 @@ export default function Navigation({ currentPage }: NavigationProps) {
               {item.label}
             </Link>
           ))}
-          <Link href="/apply">
+          <Link href="/loans/business-loan-application">
             <Button
               size="lg"
               className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-lg"
             >
-              Apply Now
+              Apply for Loan
             </Button>
           </Link>
         </div>
@@ -91,9 +92,9 @@ export default function Navigation({ currentPage }: NavigationProps) {
                 {item.label}
               </Link>
             ))}
-            <Link href="/apply" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/loans/business-loan-application" onClick={() => setIsMenuOpen(false)}>
               <Button size="lg" className="w-full bg-gradient-to-r from-primary to-secondary">
-                Apply Now
+                Apply for Loan
               </Button>
             </Link>
           </div>

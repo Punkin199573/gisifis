@@ -4,40 +4,40 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color tokens to match ultra-premium financial platform design brief */
+  /* Updated color tokens to match ultra-premium Fortune 500 financial platform design brief */
   --background: #ffffff;
-  --foreground: #4b5563;
-  --card: #f9fafb;
-  --card-foreground: #4b5563;
+  --foreground: #374151;
+  --card: #f8fafc;
+  --card-foreground: #1f2937;
   --popover: #ffffff;
-  --popover-foreground: #4b5563;
-  --primary: #0891b2;
+  --popover-foreground: #374151;
+  --primary: #374151;
   --primary-foreground: #ffffff;
-  --secondary: #10b981;
+  --secondary: #6366f1;
   --secondary-foreground: #ffffff;
-  --muted: #f9fafb;
-  --muted-foreground: #4b5563;
-  --accent: #10b981;
+  --muted: #f8fafc;
+  --muted-foreground: #1f2937;
+  --accent: #6366f1;
   --accent-foreground: #ffffff;
   --destructive: #be123c;
   --destructive-foreground: #ffffff;
   --border: #e5e7eb;
-  --input: #f9fafb;
-  --ring: rgba(11, 145, 127, 0.5);
-  --chart-1: #059669;
+  --input: #f8fafc;
+  --ring: rgba(99, 102, 241, 0.5);
+  --chart-1: #6366f1;
   --chart-2: #10b981;
-  --chart-3: #4b5563;
-  --chart-4: #0891b2;
-  --chart-5: #be123c;
+  --chart-3: #be123c;
+  --chart-4: #059669;
+  --chart-5: #f97316;
   --radius: 0.5rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #4b5563;
-  --sidebar-primary: #0891b2;
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #374151;
+  --sidebar-primary: #6366f1;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #10b981;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #e5e7eb;
-  --sidebar-ring: rgba(11, 145, 127, 0.5);
+  --sidebar-ring: rgba(99, 102, 241, 0.5);
 }
 
 .dark {
@@ -48,36 +48,36 @@
   --card-foreground: #f8fafc;
   --popover: #0f172a;
   --popover-foreground: #f8fafc;
-  --primary: #0891b2;
+  --primary: #6366f1;
   --primary-foreground: #ffffff;
   --secondary: #10b981;
   --secondary-foreground: #ffffff;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
-  --accent: #10b981;
+  --accent: #6366f1;
   --accent-foreground: #ffffff;
   --destructive: #be123c;
   --destructive-foreground: #ffffff;
   --border: #334155;
   --input: #1e293b;
-  --ring: rgba(11, 145, 127, 0.5);
-  --chart-1: #059669;
+  --ring: rgba(99, 102, 241, 0.5);
+  --chart-1: #6366f1;
   --chart-2: #10b981;
   --chart-3: #94a3b8;
-  --chart-4: #0891b2;
-  --chart-5: #be123c;
+  --chart-4: #059669;
+  --chart-5: #f97316;
   --sidebar: #0f172a;
   --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #0891b2;
+  --sidebar-primary: #6366f1;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #1e293b;
   --sidebar-accent-foreground: #f8fafc;
   --sidebar-border: #334155;
-  --sidebar-ring: rgba(11, 145, 127, 0.5);
+  --sidebar-ring: rgba(99, 102, 241, 0.5);
 }
 
 @theme inline {
-  /* Updated font variables to use Montserrat and Open Sans */
+  /* Updated font variables to use Montserrat and Open Sans with Work Sans fallback */
   --font-sans: var(--font-open-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-montserrat);
@@ -126,7 +126,7 @@
   body {
     @apply bg-background text-foreground;
   }
-  /* Added custom heading styles using Montserrat */
+  /* Enhanced heading styles using Montserrat with better hierarchy */
   h1,
   h2,
   h3,
@@ -135,21 +135,46 @@
   h6 {
     font-family: var(--font-heading);
     font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    font-weight: 900;
+    letter-spacing: -0.05em;
+  }
+
+  h2 {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  h3 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
   }
 }
 
-/* Added premium animation utilities */
+/* Enhanced premium animation utilities with better easing */
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .animate-slide-up {
-    animation: slideUp 0.8s ease-out;
+    animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.5s ease-out;
+    animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
   }
 }
 
@@ -165,7 +190,7 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -176,10 +201,47 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
   to {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+  }
+}
+
+/* Added premium gradient utilities */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

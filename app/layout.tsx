@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Global Strategic Financial Solutions - Premium Investment & Loan Services",
   description:
     "Ultra-premium financial services platform offering sophisticated investment opportunities, business loans, and wealth management solutions for high-net-worth individuals and institutions.",
-  generator: "v0.app",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
