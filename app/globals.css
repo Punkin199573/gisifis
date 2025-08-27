@@ -38,6 +38,11 @@
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 210 40% 92%;
     --sidebar-ring: 207 90% 25%;
+
+    /* Added proper font family variables to match layout.tsx */
+    --font-heading: var(--font-montserrat);
+    --font-body: var(--font-open-sans);
+    --font-sans: var(--font-open-sans);
   }
 
   .dark {
@@ -84,13 +89,13 @@
     @apply bg-background text-foreground;
   }
 
-  /* Added premium typography with Space Grotesk and DM Sans */
+  /* Updated font classes to use the proper font variables from layout.tsx */
   .font-heading {
-    font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
   }
 
   .font-body {
-    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-open-sans), system-ui, -apple-system, sans-serif;
   }
 }
 
