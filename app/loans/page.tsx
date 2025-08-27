@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Link } from "next/link"
+import Link from "next/link"
 import {
   ArrowRight,
   Shield,
@@ -393,12 +393,12 @@ export default function LoansPage() {
                     />
                   </div>
 
-                  <Button className="w-full h-12 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-base font-semibold">
-                    <Link href="/loans/business-loan-application" className="flex items-center justify-center w-full">
+                  <Link href="/loans/business-loan-application">
+                    <Button className="w-full h-12 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-base font-semibold">
                       Start Full Application
                       <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
+                    </Button>
+                  </Link>
 
                   <p className="text-xs text-muted-foreground text-center">
                     By submitting this form, you agree to our Terms of Service and Privacy Policy. Your information is
