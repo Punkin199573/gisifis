@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -7,8 +8,13 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-6">
-              <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                <span className="text-primary-foreground font-bold text-lg">GSFS</span>
+              <div className="relative h-12 w-12 flex-shrink-0">
+                <Image
+                  src="/gsfs-logo.png"
+                  alt="Global Strategic Financial Solutions"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div>
                 <span className="font-heading font-black text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -18,13 +24,20 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-              Ultra-premium financial services platform offering sophisticated investment opportunities and business
+              Part of the Global Financial Consortium, providing sophisticated investment opportunities and business
               financing solutions for discerning clients worldwide.
             </p>
-            <div className="text-sm text-muted-foreground">
-              <p className="font-semibold mb-2">Regulatory Information:</p>
-              <p>Delaware Statutory Trust • SEC Registered • FCA Authorized</p>
-              <p>Services intended for Accredited & Sophisticated Investors</p>
+            <div className="text-sm text-muted-foreground space-y-2">
+              <p className="font-semibold mb-2">Corporate Information:</p>
+              <p>Delaware Statutory Trust • EIN: 87-6494614</p>
+              <p>Regulated Investment Company</p>
+              <p>Services for HNWI, Sophisticated Investors & Institutions</p>
+              <div className="mt-4 space-y-1">
+                <p className="font-medium">Corporate Office:</p>
+                <p>3123 Cloverbank Road, Hamburg, NY 14075</p>
+                <p>Phone: +1 (972) 722-771777</p>
+                <p>Email: office@rmg-capital.com</p>
+              </div>
             </div>
           </div>
           <div>
@@ -87,12 +100,49 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+          <div>
+            <h3 className="font-heading font-bold text-lg mb-6">Global Offices</h3>
+            <div className="space-y-4 text-sm text-muted-foreground">
+              <div>
+                <p className="font-medium text-foreground">United States</p>
+                <p>Hamburg, New York</p>
+                <p>+1 (917) 715-6677</p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground">Israel</p>
+                <p>Tel Aviv Operations</p>
+                <p>+972 52 675-9222</p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground">Banking Partner</p>
+                <p>Citibank, N.A.</p>
+                <p>New York, NY</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="border-t mt-12 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2025 Global Strategic Financial Solutions. All rights reserved. Investment opportunities intended solely
-            for Accredited Investors, Institutional, and Sophisticated Investors.
-          </p>
+        <div className="border-t mt-12 pt-8">
+          <div className="grid gap-6 md:grid-cols-2 text-sm text-muted-foreground">
+            <div>
+              <p className="font-medium text-foreground mb-2">Legal & Compliance</p>
+              <p>Legal Counsel: The Keenan Law Firm</p>
+              <p>Attorney: John J. Keenan Esq.</p>
+              <p>Anti-Money Laundering Compliance (FATF 6/01)</p>
+            </div>
+            <div>
+              <p className="font-medium text-foreground mb-2">Investment Disclaimer</p>
+              <p>
+                Investment opportunities intended solely for Accredited Investors, Institutional, and Sophisticated
+                Investors. All investments carry risk of loss.
+              </p>
+            </div>
+          </div>
+          <div className="text-center mt-8 pt-6 border-t">
+            <p className="text-sm text-muted-foreground">
+              © 2025 Global Strategic Financial Solutions. All rights reserved. Part of RMG Capital Group Global
+              Financial Consortium.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

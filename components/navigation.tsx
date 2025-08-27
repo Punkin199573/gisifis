@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import Image from "next/image"
 
 interface NavigationProps {
   currentPage?: string
@@ -25,14 +26,20 @@ export default function Navigation({ currentPage }: NavigationProps) {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
-          <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-            <span className="text-primary-foreground font-bold text-lg">GSFS</span>
+          <div className="relative h-12 w-12 flex-shrink-0">
+            <Image
+              src="/gsfs-logo.png"
+              alt="Global Strategic Financial Solutions"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-          <div>
-            <span className="font-heading font-black text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <div className="hidden sm:block">
+            <span className="font-heading font-black text-xl lg:text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Global Strategic
             </span>
-            <div className="text-sm text-muted-foreground font-medium">Financial Solutions</div>
+            <div className="text-xs lg:text-sm text-muted-foreground font-medium">Financial Solutions</div>
           </div>
         </Link>
 

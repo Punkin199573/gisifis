@@ -37,7 +37,7 @@ export default function HomePage() {
           style={{ y }}
         />
 
-        <div className="container relative z-10 pt-20">
+        <div className="container relative z-10 pt-20 px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mx-auto max-w-6xl text-center"
             initial={{ opacity: 0, y: 50 }}
@@ -51,98 +51,99 @@ export default function HomePage() {
             >
               <Badge
                 variant="secondary"
-                className="mb-6 px-6 py-2 text-sm font-semibold bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20"
+                className="mb-6 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20"
               >
-                Premium Financial Services • gsfs.co.uk
+                RMG Capital Group • Delaware Statutory Trust • EIN: 87-6494614
               </Badge>
             </motion.div>
 
             <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tight text-balance mb-8"
+              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tight text-balance mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                Ultra-Premium
+                Global Strategic
               </span>
               <br />
               <span className="text-foreground">Financial Solutions</span>
             </motion.h1>
 
             <motion.p
-              className="text-xl md:text-2xl leading-relaxed text-muted-foreground text-pretty max-w-4xl mx-auto mb-12"
+              className="text-lg sm:text-xl md:text-2xl leading-relaxed text-muted-foreground text-pretty max-w-4xl mx-auto mb-8 sm:mb-12 px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              Exclusive investment opportunities, sophisticated business financing, and wealth management solutions for
-              high-net-worth individuals and institutional clients worldwide.
+              Part of the Global Financial Consortium, providing sophisticated investment opportunities, business
+              financing, and wealth management solutions for HNWI, institutional clients, and sophisticated investors
+              worldwide.
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-6"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
               <Button
                 size="lg"
-                className="h-16 px-12 text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
+                className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
               >
                 Apply for Business Loan
-                <ArrowRight className="ml-3 h-5 w-5" />
+                <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="h-16 px-12 text-lg border-2 hover:bg-primary/5 bg-transparent"
+                className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg border-2 hover:bg-primary/5 bg-transparent"
               >
                 Explore Investment Portfolio
               </Button>
             </motion.div>
 
             <motion.div
-              className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+              className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <div className="text-center">
-                <div className="text-4xl font-heading font-black text-primary mb-2">$2.5B+</div>
-                <div className="text-muted-foreground">Assets Under Management</div>
+                <div className="text-3xl sm:text-4xl font-heading font-black text-primary mb-2">$2.5B+</div>
+                <div className="text-sm sm:text-base text-muted-foreground">Assets Under Management</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-heading font-black text-secondary mb-2">500+</div>
-                <div className="text-muted-foreground">Successful Projects Funded</div>
+                <div className="text-3xl sm:text-4xl font-heading font-black text-secondary mb-2">500+</div>
+                <div className="text-sm sm:text-base text-muted-foreground">Successful Projects Funded</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-heading font-black text-primary mb-2">25+</div>
-                <div className="text-muted-foreground">Countries Served</div>
+                <div className="text-3xl sm:text-4xl font-heading font-black text-primary mb-2">25+</div>
+                <div className="text-sm sm:text-base text-muted-foreground">Countries Served</div>
               </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      <section id="services" className="py-32 bg-gradient-to-b from-background to-muted/30">
-        <div className="container">
+      <section id="services" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-background to-muted/30">
+        <div className="container px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="mx-auto max-w-4xl text-center mb-20"
+            className="mx-auto max-w-4xl text-center mb-12 sm:mb-20"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-6xl font-heading font-black tracking-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-4 sm:mb-6">
               Premium <span className="text-primary">Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty">
+            <p className="text-lg sm:text-xl text-muted-foreground text-pretty px-4">
               Comprehensive financial solutions tailored for sophisticated investors and growing businesses
             </p>
           </motion.div>
 
-          <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">
             {[
               {
                 icon: PieChart,
@@ -193,20 +194,24 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full p-8 hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/20 group">
-                  <CardHeader className="pb-6">
-                    <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="h-8 w-8 text-primary" />
+                <Card className="h-full p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/20 group">
+                  <CardHeader className="pb-4 sm:pb-6">
+                    <div className="h-12 w-12 sm:h-16 sm:w-16 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                     </div>
-                    <CardTitle className="text-2xl font-heading font-bold mb-3">{service.title}</CardTitle>
-                    <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
+                    <CardTitle className="text-xl sm:text-2xl font-heading font-bold mb-2 sm:mb-3">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-sm sm:text-base leading-relaxed">
+                      {service.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-3 mb-6">
+                    <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0" />
-                          <span className="text-sm font-medium">{feature}</span>
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-secondary flex-shrink-0 mt-0.5" />
+                          <span className="text-xs sm:text-sm font-medium">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -326,33 +331,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="py-32 bg-gradient-to-b from-background to-muted/30">
-        <div className="container">
-          <div className="grid gap-16 lg:grid-cols-2 items-center">
+      <section id="about" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-background to-muted/30">
+        <div className="container px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 sm:gap-16 lg:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-heading font-black tracking-tight mb-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-6 sm:mb-8">
                 About <span className="text-primary">GSFS</span>
               </h2>
-              <p className="text-xl leading-relaxed text-muted-foreground mb-8">
-                Global Strategic Financial Solutions represents the pinnacle of financial excellence, serving as an
-                integral part of the Global Financial Consortium with headquarters spanning New York, London, and Dubai.
+              <p className="text-lg sm:text-xl leading-relaxed text-muted-foreground mb-6 sm:mb-8">
+                Global Strategic Financial Solutions is part of RMG Capital Group, a Delaware Statutory Trust and
+                regulated investment company serving the Global Financial Consortium. Based in New York and Tel Aviv, we
+                provide sophisticated financial services to HNWI, accredited investors, families, foundations, and
+                institutions worldwide.
               </p>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {[
-                  "Delaware Statutory Trust with SEC registration",
+                  "Delaware Statutory Trust (EIN: 87-6494614)",
+                  "Regulated Investment Company with SEC compliance",
                   "Serving HNWI, Accredited & Sophisticated Investors",
-                  "Global reach across 25+ countries",
-                  "$2.5B+ in assets under management",
-                  "500+ successful project financings",
+                  "Global operations: USA, Israel, and international markets",
+                  "Banking partnership with Citibank, N.A.",
+                  "Legal counsel: The Keenan Law Firm",
+                  "Anti-Money Laundering compliance (FATF 6/01)",
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center gap-4">
-                    <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0" />
-                    <span className="text-lg font-medium">{item}</span>
+                  <div key={index} className="flex items-start gap-3 sm:gap-4">
+                    <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-base sm:text-lg font-medium">{item}</span>
                   </div>
                 ))}
               </div>
@@ -363,34 +372,40 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="grid gap-6"
+              className="grid gap-4 sm:gap-6"
             >
-              <Card className="p-8 border-2 hover:border-primary/20 transition-colors">
-                <div className="flex items-center gap-4 mb-4">
-                  <Globe className="h-12 w-12 text-primary" />
+              <Card className="p-6 sm:p-8 border-2 hover:border-primary/20 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                  <Globe className="h-10 w-10 sm:h-12 sm:w-12 text-primary flex-shrink-0" />
                   <div>
-                    <h3 className="text-2xl font-heading font-bold">Global Expertise</h3>
-                    <p className="text-muted-foreground">International presence with deep market knowledge</p>
+                    <h3 className="text-xl sm:text-2xl font-heading font-bold">Global Expertise</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">
+                      International presence with deep market knowledge
+                    </p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-8 border-2 hover:border-secondary/20 transition-colors">
-                <div className="flex items-center gap-4 mb-4">
-                  <Shield className="h-12 w-12 text-secondary" />
+              <Card className="p-6 sm:p-8 border-2 hover:border-secondary/20 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                  <Shield className="h-10 w-10 sm:h-12 sm:w-12 text-secondary flex-shrink-0" />
                   <div>
-                    <h3 className="text-2xl font-heading font-bold">Regulatory Excellence</h3>
-                    <p className="text-muted-foreground">Highest governance and compliance standards</p>
+                    <h3 className="text-xl sm:text-2xl font-heading font-bold">Regulatory Excellence</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">
+                      Highest governance and compliance standards
+                    </p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-8 border-2 hover:border-primary/20 transition-colors">
-                <div className="flex items-center gap-4 mb-4">
-                  <TrendingUp className="h-12 w-12 text-primary" />
+              <Card className="p-6 sm:p-8 border-2 hover:border-primary/20 transition-colors">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                  <TrendingUp className="h-10 w-10 sm:h-12 sm:w-12 text-primary flex-shrink-0" />
                   <div>
-                    <h3 className="text-2xl font-heading font-bold">Proven Results</h3>
-                    <p className="text-muted-foreground">Track record of exceptional performance</p>
+                    <h3 className="text-xl sm:text-2xl font-heading font-bold">Proven Results</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">
+                      Track record of exceptional performance
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -399,8 +414,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-32 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="container">
+      <section className="py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="container px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mx-auto max-w-4xl text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -408,52 +423,56 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-6xl font-heading font-black tracking-tight mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-4 sm:mb-6">
               Ready to <span className="text-primary">Get Started?</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-12 text-pretty">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-8 sm:mb-12 px-4">
               Join the elite circle of sophisticated investors and successful businesses who trust GSFS with their most
               important financial decisions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8">
               <Button
                 size="lg"
-                className="h-16 px-12 text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
+                className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
               >
                 Apply for Business Loan
-                <ArrowRight className="ml-3 h-5 w-5" />
+                <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="h-16 px-12 text-lg border-2 bg-transparent">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg border-2 bg-transparent"
+              >
                 Schedule Private Consultation
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground px-4">
               Services intended solely for Accredited Investors, Institutional, and Sophisticated Investors
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section id="contact" className="py-32 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container">
+      <section id="contact" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-muted/30 to-background">
+        <div className="container px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="mx-auto max-w-4xl text-center mb-20"
+            className="mx-auto max-w-4xl text-center mb-12 sm:mb-20"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-6xl font-heading font-black tracking-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-4 sm:mb-6">
               Contact <span className="text-secondary">Our Experts</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground px-4">
               Connect with our team of financial specialists for personalized solutions
             </p>
           </motion.div>
 
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid gap-8 sm:gap-12 lg:grid-cols-2">
             <motion.div
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -462,38 +481,43 @@ export default function HomePage() {
               {[
                 {
                   icon: MapPin,
-                  title: "Global Headquarters - New York",
-                  content: "3123 CloverBank Road, Hamburg, NY 14075, United States",
+                  title: "Corporate Headquarters - USA",
+                  content: "3123 Cloverbank Road\nHamburg, NY 14075\nUnited States",
                 },
                 {
                   icon: MapPin,
-                  title: "European Office - London",
-                  content: "1 Canary Wharf, London E14 5AB, United Kingdom",
-                },
-                {
-                  icon: MapPin,
-                  title: "Middle East Office - Dubai",
-                  content: "Digital Park - Building A1, Silicon Oasis, Dubai, UAE",
+                  title: "International Operations - Israel",
+                  content: "Tel Aviv Operations Center\nIsrael",
                 },
                 {
                   icon: Phone,
                   title: "Phone Numbers",
-                  content: "+1 (917) 715-6677 (US)\n+44 20 7946 0958 (UK)\n+971 553 267758 (UAE)",
+                  content:
+                    "+1 (972) 722-771777 (Main Office)\n+1 (917) 715-6677 (CEO Direct)\n+972 52 675-9222 (International)",
                 },
                 {
                   icon: Mail,
                   title: "Email Addresses",
-                  content: "office@gsfs.co.uk\nsales@gsfs.co.uk\ninvestor.relations@gsfs.co.uk",
+                  content:
+                    "office@rmg-capital.com (General)\nramimichaeli@rmg-capital.com (CEO)\nrafihason@rmg-capital.com (CFO)",
+                },
+                {
+                  icon: Building2,
+                  title: "Banking & Legal",
+                  content:
+                    "Banking: Citibank, N.A. (New York)\nLegal: The Keenan Law Firm\nAttorney: John J. Keenan Esq.",
                 },
               ].map((contact, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
-                      <contact.icon className="h-6 w-6 text-primary" />
+                <Card key={index} className="p-4 sm:p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <contact.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-heading font-bold text-lg mb-2">{contact.title}</h3>
-                      <p className="text-muted-foreground whitespace-pre-line">{contact.content}</p>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-heading font-bold text-base sm:text-lg mb-2">{contact.title}</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line break-words">
+                        {contact.content}
+                      </p>
                     </div>
                   </div>
                 </Card>
@@ -506,38 +530,38 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="p-8 border-2">
-                <CardHeader className="pb-6">
-                  <CardTitle className="text-2xl font-heading font-bold">Get in Touch</CardTitle>
-                  <CardDescription className="text-base">
+              <Card className="p-6 sm:p-8 border-2">
+                <CardHeader className="pb-4 sm:pb-6 px-0">
+                  <CardTitle className="text-xl sm:text-2xl font-heading font-bold">Get in Touch</CardTitle>
+                  <CardDescription className="text-sm sm:text-base">
                     Send us a message and our team will respond within 24 hours
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
+                <CardContent className="space-y-4 sm:space-y-6 px-0">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-semibold mb-2 block">First Name</label>
-                      <input className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" />
+                      <input className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent text-sm sm:text-base" />
                     </div>
                     <div>
                       <label className="text-sm font-semibold mb-2 block">Last Name</label>
-                      <input className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" />
+                      <input className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent text-sm sm:text-base" />
                     </div>
                   </div>
                   <div>
                     <label className="text-sm font-semibold mb-2 block">Email Address</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
                   <div>
                     <label className="text-sm font-semibold mb-2 block">Company</label>
-                    <input className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent" />
+                    <input className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent text-sm sm:text-base" />
                   </div>
                   <div>
                     <label className="text-sm font-semibold mb-2 block">Service Interest</label>
-                    <select className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent">
+                    <select className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent text-sm sm:text-base">
                       <option>Wealth & Asset Management</option>
                       <option>Project Funding Solutions</option>
                       <option>Fiduciary & Trust Services</option>
@@ -548,7 +572,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <label className="text-sm font-semibold mb-2 block">Investment Amount (Optional)</label>
-                    <select className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent">
+                    <select className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent text-sm sm:text-base">
                       <option>$1M - $5M</option>
                       <option>$5M - $25M</option>
                       <option>$25M - $100M</option>
@@ -559,10 +583,10 @@ export default function HomePage() {
                     <label className="text-sm font-semibold mb-2 block">Message</label>
                     <textarea
                       rows={4}
-                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent text-sm sm:text-base resize-none"
                     ></textarea>
                   </div>
-                  <Button className="w-full h-12 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+                  <Button className="w-full h-10 sm:h-12 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-sm sm:text-base">
                     Send Message
                   </Button>
                 </CardContent>
