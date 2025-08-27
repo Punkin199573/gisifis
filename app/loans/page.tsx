@@ -45,7 +45,9 @@ export default function LoansPage() {
             </Badge>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-tight text-balance mb-6">
-              <span className="gradient-text">Business Loans</span>
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Business Loans
+              </span>
               <br />
               <span className="text-foreground">Tailored for Growth</span>
             </h1>

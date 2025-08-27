@@ -8,7 +8,6 @@ import {
   Shield,
   TrendingUp,
   CheckCircle,
-  ArrowLeft,
   Banknote,
   PieChart,
   Lock,
@@ -16,39 +15,14 @@ import {
   Building2,
   DollarSign,
 } from "lucide-react"
-import Link from "next/link"
 import { motion } from "framer-motion"
+import Navigation from "@/components/navigation"
+import Footer from "@/components/footer"
 
 export default function LendingProgramPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-              <span className="text-primary-foreground font-bold text-lg">GSFS</span>
-            </div>
-            <div>
-              <span className="font-heading font-black text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Global Strategic
-              </span>
-              <div className="text-sm text-muted-foreground font-medium">Financial Solutions</div>
-            </div>
-          </Link>
-
-          <div className="flex items-center space-x-6">
-            <Link
-              href="/wealth-management"
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Wealth Management
-            </Link>
-            <Button className="bg-gradient-to-r from-primary to-secondary">Get Started</Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="/wealth-management/lending-program" />
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
@@ -408,6 +382,8 @@ export default function LendingProgramPage() {
           </motion.div>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }
