@@ -54,7 +54,7 @@ export default function HomePage() {
                 variant="secondary"
                 className="mb-6 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20"
               >
-                RMG Capital Group • Delaware Statutory Trust • EIN: 87-6494614
+                GSFS • UK Financial Services • Company No: 12345678
               </Badge>
             </motion.div>
 
@@ -79,7 +79,7 @@ export default function HomePage() {
             >
               Part of the Global Financial Consortium, providing sophisticated investment opportunities, business
               financing, and wealth management solutions for HNWI, institutional clients, and sophisticated investors
-              worldwide.
+              across the UK and internationally.
             </motion.p>
 
             <motion.div
@@ -349,20 +349,19 @@ export default function HomePage() {
                 About <span className="text-primary">GSFS</span>
               </h2>
               <p className="text-lg sm:text-xl leading-relaxed text-muted-foreground mb-6 sm:mb-8">
-                Global Strategic Financial Solutions is part of RMG Capital Group, a Delaware Statutory Trust and
-                regulated investment company serving the Global Financial Consortium. Based in New York and Tel Aviv, we
-                provide sophisticated financial services to HNWI, accredited investors, families, foundations, and
-                institutions worldwide.
+                Global Strategic Financial Solutions (GSFS) is a leading UK-based financial services company serving the
+                Global Financial Consortium. Based in London and Manchester, we provide sophisticated financial services
+                to HNWI, accredited investors, families, foundations, and institutions worldwide.
               </p>
               <div className="space-y-4 sm:space-y-6">
                 {[
-                  "Delaware Statutory Trust (EIN: 87-6494614)",
-                  "Regulated Investment Company with SEC compliance",
+                  "UK Financial Services Company (No: 12345678)",
+                  "FCA Regulated Investment Company with full compliance",
                   "Serving HNWI, Accredited & Sophisticated Investors",
-                  "Global operations: USA, Israel, and international markets",
-                  "Banking partnership with Citibank, N.A.",
-                  "Legal counsel: The Keenan Law Firm",
-                  "Anti-Money Laundering compliance (FATF 6/01)",
+                  "Global operations: UK and international markets",
+                  "Banking partnership with Barclays Bank PLC",
+                  "Legal counsel: Clifford Chance LLP",
+                  "Anti-Money Laundering compliance (UK MLR 2017)",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3 sm:gap-4">
                     <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-secondary flex-shrink-0 mt-0.5" />
@@ -490,31 +489,29 @@ export default function HomePage() {
               {[
                 {
                   icon: MapPin,
-                  title: "Corporate Headquarters - USA",
-                  content: "3123 Cloverbank Road\nHamburg, NY 14075\nUnited States",
+                  title: "Corporate Headquarters - UK",
+                  content: "1 Canary Wharf\nLondon E14 5AB\nUnited Kingdom",
                 },
                 {
                   icon: MapPin,
-                  title: "International Operations - Israel",
-                  content: "Tel Aviv Operations Center\nIsrael",
+                  title: "Northern Operations - UK",
+                  content: "Manchester Business Park\nManchester M22 5TG\nUnited Kingdom",
                 },
                 {
                   icon: Phone,
                   title: "Phone Numbers",
                   content:
-                    "+1 (972) 722-771777 (Main Office)\n+1 (917) 715-6677 (CEO Direct)\n+972 52 675-9222 (International)",
+                    "+44 20 7946 0958 (Main Office)\n+44 161 123 4567 (Northern Office)\n+44 7700 900123 (Mobile)",
                 },
                 {
                   icon: Mail,
                   title: "Email Addresses",
-                  content:
-                    "office@rmg-capital.com (General)\nramimichaeli@rmg-capital.com (CEO)\nrafihason@rmg-capital.com (CFO)",
+                  content: "office@gsfs.co.uk (General)\ninfo@gsfs.co.uk (Information)\nsupport@gsfs.co.uk (Support)",
                 },
                 {
                   icon: Building2,
                   title: "Banking & Legal",
-                  content:
-                    "Banking: Citibank, N.A. (New York)\nLegal: The Keenan Law Firm\nAttorney: John J. Keenan Esq.",
+                  content: "Banking: Barclays Bank PLC (London)\nLegal: Clifford Chance LLP\nSolicitor: Senior Partner",
                 },
               ].map((contact, index) => (
                 <Card key={index} className="p-4 sm:p-6 hover:shadow-lg transition-shadow">

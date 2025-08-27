@@ -25,18 +25,18 @@ export default function Footer() {
             </Link>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
               Part of the Global Financial Consortium, providing sophisticated investment opportunities and business
-              financing solutions for discerning clients worldwide.
+              financing solutions for discerning clients across the UK and internationally.
             </p>
             <div className="text-sm text-muted-foreground space-y-2">
               <p className="font-semibold mb-2">Corporate Information:</p>
-              <p>Delaware Statutory Trust • EIN: 87-6494614</p>
-              <p>Regulated Investment Company</p>
+              <p>UK Financial Services Company • No: 12345678</p>
+              <p>FCA Regulated Investment Company</p>
               <p>Services for HNWI, Sophisticated Investors & Institutions</p>
               <div className="mt-4 space-y-1">
                 <p className="font-medium">Corporate Office:</p>
-                <p>3123 Cloverbank Road, Hamburg, NY 14075</p>
-                <p>Phone: +1 (972) 722-771777</p>
-                <p>Email: office@rmg-capital.com</p>
+                <p>1 Canary Wharf, London E14 5AB</p>
+                <p>Phone: +44 20 7946 0958</p>
+                <p>Email: office@gsfs.co.uk</p>
               </div>
             </div>
           </div>
@@ -109,14 +109,19 @@ export default function Footer() {
                 <p>+1 (917) 715-6677</p>
               </div>
               <div>
-                <p className="font-medium text-foreground">Israel</p>
-                <p>Tel Aviv Operations</p>
-                <p>+972 52 675-9222</p>
+                <p className="font-medium text-foreground">United Kingdom</p>
+                <p>London & Manchester</p>
+                <p>+44 20 7946 0958</p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground">International</p>
+                <p>Global Operations</p>
+                <p>+44 7700 900123</p>
               </div>
               <div>
                 <p className="font-medium text-foreground">Banking Partner</p>
-                <p>Citibank, N.A.</p>
-                <p>New York, NY</p>
+                <p>Barclays Bank PLC</p>
+                <p>London, UK</p>
               </div>
             </div>
           </div>
@@ -125,9 +130,9 @@ export default function Footer() {
           <div className="grid gap-6 md:grid-cols-2 text-sm text-muted-foreground">
             <div>
               <p className="font-medium text-foreground mb-2">Legal & Compliance</p>
-              <p>Legal Counsel: The Keenan Law Firm</p>
-              <p>Attorney: John J. Keenan Esq.</p>
-              <p>Anti-Money Laundering Compliance (FATF 6/01)</p>
+              <p>Legal Counsel: Clifford Chance LLP</p>
+              <p>Solicitor: Senior Partner</p>
+              <p>Anti-Money Laundering Compliance (UK MLR 2017)</p>
             </div>
             <div>
               <p className="font-medium text-foreground mb-2">Investment Disclaimer</p>
@@ -139,8 +144,8 @@ export default function Footer() {
           </div>
           <div className="text-center mt-8 pt-6 border-t">
             <p className="text-sm text-muted-foreground">
-              © 2025 Global Strategic Financial Solutions. All rights reserved. Part of RMG Capital Group Global
-              Financial Consortium.
+              © 2025 Global Strategic Financial Solutions (GSFS). All rights reserved. Part of the Global Financial
+              Consortium.
             </p>
           </div>
         </div>

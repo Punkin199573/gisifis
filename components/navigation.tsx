@@ -27,7 +27,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
-          <div className="relative h-12 w-12 flex-shrink-0">
+          <div className="relative h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0">
             <Image
               src="/gsfs-logo.png"
               alt="Global Strategic Financial Solutions"
