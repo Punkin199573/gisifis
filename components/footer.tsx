@@ -35,7 +35,7 @@ export default function Footer() {
               <div className="mt-4 space-y-1">
                 <p className="font-medium">Corporate Office:</p>
                 <p>1 Canary Wharf, London E14 5AB</p>
-                <p>Phone: +44 20 7946 0958</p>
+                <p>Phone: +44 7700 144320</p>
                 <p>Email: office@gsfs.co.uk</p>
               </div>
             </div>
@@ -106,17 +106,17 @@ export default function Footer() {
               <div>
                 <p className="font-medium text-foreground">United States</p>
                 <p>Hamburg, New York</p>
-                <p>+1 (917) 715-6677</p>
+                <p>+1 979 618 8876</p>
               </div>
               <div>
                 <p className="font-medium text-foreground">United Kingdom</p>
                 <p>London & Manchester</p>
-                <p>+44 20 7946 0958</p>
+                <p>+44 7700 144320</p>
               </div>
               <div>
                 <p className="font-medium text-foreground">International</p>
                 <p>Global Operations</p>
-                <p>+44 7700 900123</p>
+                <p>+44 7700 144320</p>
               </div>
               <div>
                 <p className="font-medium text-foreground">Banking Partner</p>

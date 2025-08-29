@@ -500,8 +500,7 @@ export default function HomePage() {
                 {
                   icon: Phone,
                   title: "Phone Numbers",
-                  content:
-                    "+44 20 7946 0958 (Main Office)\n+44 161 123 4567 (Northern Office)\n+44 7700 900123 (Mobile)",
+                  content: "+44 7700 144320 (Main Office)\n+1 979 618 8876 (US Office)\n+44 7700 144320 (Mobile)",
                 },
                 {
                   icon: Mail,
