@@ -1,11 +1,21 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { useState } from "react"
 import Image from "next/image"
+
+const Menu = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+)
+
+const X = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+  </svg>
+)
 
 interface NavigationProps {
   currentPage?: string
@@ -73,12 +83,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <motion.div
-          className="lg:hidden border-t bg-background/95 backdrop-blur-xl"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-        >
+        <div className="lg:hidden border-t bg-background/95 backdrop-blur-xl">
           <div className="container py-6 space-y-4">
             {navigationItems.map((item) => (
               <Link
@@ -98,7 +103,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
               </Button>
             </Link>
           </div>
-        </motion.div>
+        </div>
       )}
     </nav>
   )

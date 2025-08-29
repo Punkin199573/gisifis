@@ -3,98 +3,197 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-  ArrowRight,
-  Shield,
-  TrendingUp,
-  Globe,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Building2,
-  Banknote,
-  PieChart,
-  Lock,
-  Star,
-  CheckCircle,
-} from "lucide-react"
-import { motion, useScroll, useTransform } from "framer-motion"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Link from "next/link"
 
-export default function HomePage() {
-  const { scrollYProgress } = useScroll()
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
+const ArrowRight = () => (
+  <svg className="ml-3 h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+  </svg>
+)
 
+const CheckCircle = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+    />
+  </svg>
+)
+
+const Star = ({ className }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+)
+
+const Shield = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+    />
+  </svg>
+)
+
+const TrendingUp = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+  </svg>
+)
+
+const Globe = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9"
+    />
+  </svg>
+)
+
+const Award = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+    />
+  </svg>
+)
+
+const Phone = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+    />
+  </svg>
+)
+
+const Mail = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+    />
+  </svg>
+)
+
+const MapPin = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+    />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+)
+
+const Building2 = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+    />
+  </svg>
+)
+
+const Banknote = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+    />
+  </svg>
+)
+
+const PieChart = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+    />
+  </svg>
+)
+
+const Lock = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"
+    />
+  </svg>
+)
+
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation currentPage="/" />
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5"
-          style={{ y }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
 
         <div className="container relative z-10 pt-20 px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="mx-auto max-w-6xl text-center"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+          <div className="mx-auto max-w-6xl text-center">
+            <div>
               <Badge
                 variant="secondary"
                 className="mb-6 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20"
               >
                 GSFS • UK Financial Services • Company No: 12345678
               </Badge>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tight text-balance mb-6 sm:mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tight text-balance mb-6 sm:mb-8">
               <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                 Global Strategic
               </span>
               <br />
               <span className="text-foreground">Financial Solutions</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              className="text-lg sm:text-xl md:text-2xl leading-relaxed text-muted-foreground text-pretty max-w-4xl mx-auto mb-8 sm:mb-12 px-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
+            <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-muted-foreground text-pretty max-w-4xl mx-auto mb-8 sm:mb-12 px-4">
               Part of the Global Financial Consortium, providing sophisticated investment opportunities, business
               financing, and wealth management solutions for HNWI, institutional clients, and sophisticated investors
               across the UK and internationally.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
               <Link href="/loans/business-loan-application">
                 <Button
                   size="lg"
                   className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
                 >
                   Apply for Business Loan
-                  <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
+                  <ArrowRight />
                 </Button>
               </Link>
               <Link href="/wealth-management">
@@ -106,14 +205,9 @@ export default function HomePage() {
                   Explore Investment Portfolio
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto px-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-            >
+            <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto px-4">
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-heading font-black text-primary mb-2">$2.5B+</div>
                 <div className="text-sm sm:text-base text-muted-foreground">Assets Under Management</div>
@@ -126,27 +220,21 @@ export default function HomePage() {
                 <div className="text-3xl sm:text-4xl font-heading font-black text-primary mb-2">25+</div>
                 <div className="text-sm sm:text-base text-muted-foreground">Countries Served</div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="services" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-background to-muted/30">
         <div className="container px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="mx-auto max-w-4xl text-center mb-12 sm:mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-4 sm:mb-6">
               Premium <span className="text-primary">Services</span>
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground text-pretty px-4">
               Comprehensive financial solutions tailored for sophisticated investors and growing businesses
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">
             {[
@@ -192,13 +280,7 @@ export default function HomePage() {
                 features: ["Trust Certificates", "Asset Backing", "Inflation Protection"],
               },
             ].map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+              <div key={index}>
                 <Card className="h-full p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border-2 hover:border-primary/20 group">
                   <CardHeader className="pb-4 sm:pb-6">
                     <div className="h-12 w-12 sm:h-16 sm:w-16 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -228,7 +310,7 @@ export default function HomePage() {
                     </Button>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -236,20 +318,14 @@ export default function HomePage() {
 
       <section id="testimonials" className="py-32 bg-gradient-to-b from-muted/30 to-background">
         <div className="container">
-          <motion.div
-            className="mx-auto max-w-4xl text-center mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="mx-auto max-w-4xl text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-heading font-black tracking-tight mb-6">
               Client <span className="text-secondary">Success Stories</span>
             </h2>
             <p className="text-xl text-muted-foreground text-pretty">
               Hear from our satisfied clients who have achieved exceptional results with our premium services
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 lg:grid-cols-3">
             {[
@@ -302,13 +378,7 @@ export default function HomePage() {
                 rating: 5,
               },
             ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+              <div key={index}>
                 <Card className="h-full p-8 hover:shadow-xl transition-all duration-300">
                   <CardContent className="space-y-6">
                     <div className="flex gap-1">
@@ -330,7 +400,7 @@ export default function HomePage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -339,12 +409,7 @@ export default function HomePage() {
       <section id="about" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-background to-muted/30">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 sm:gap-16 lg:grid-cols-2 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <div className="space-y-4 sm:space-y-6">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-6 sm:mb-8">
                 About <span className="text-primary">GSFS</span>
               </h2>
@@ -359,7 +424,7 @@ export default function HomePage() {
                   "FCA Regulated Investment Company with full compliance",
                   "Serving HNWI, Accredited & Sophisticated Investors",
                   "Global operations: UK and international markets",
-                  "Banking partnership with Barclays Bank PLC",
+                  "Banking partnership with HSBC bank",
                   "Legal counsel: Clifford Chance LLP",
                   "Anti-Money Laundering compliance (UK MLR 2017)",
                 ].map((item, index) => (
@@ -369,15 +434,9 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="grid gap-4 sm:gap-6"
-            >
+            <div className="grid gap-4 sm:gap-6">
               <Card className="p-6 sm:p-8 border-2 hover:border-primary/20 transition-colors">
                 <div className="flex items-center gap-3 sm:gap-4 mb-4">
                   <Globe className="h-10 w-10 sm:h-12 sm:w-12 text-primary flex-shrink-0" />
@@ -413,20 +472,14 @@ export default function HomePage() {
                   </div>
                 </div>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="mx-auto max-w-4xl text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-4 sm:mb-6">
               Ready to <span className="text-primary">Get Started?</span>
             </h2>
@@ -441,7 +494,7 @@ export default function HomePage() {
                   className="w-full sm:w-auto h-14 sm:h-16 px-8 sm:px-12 text-base sm:text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-2xl"
                 >
                   Apply for Business Loan
-                  <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
+                  <ArrowRight />
                 </Button>
               </Link>
               <Link href="/schedule-private-consultation">
@@ -457,35 +510,23 @@ export default function HomePage() {
             <p className="text-sm text-muted-foreground px-4">
               Services intended solely for Accredited Investors, Institutional, and Sophisticated Investors
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       <section id="contact" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-muted/30 to-background">
         <div className="container px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="mx-auto max-w-4xl text-center mb-12 sm:mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight mb-4 sm:mb-6">
               Contact <span className="text-secondary">Our Experts</span>
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground px-4">
               Connect with our team of financial specialists for personalized solutions
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 sm:gap-12 lg:grid-cols-2">
-            <motion.div
-              className="space-y-6 sm:space-y-8"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <div className="space-y-6 sm:space-y-8">
               {[
                 {
                   icon: MapPin,
@@ -500,7 +541,7 @@ export default function HomePage() {
                 {
                   icon: Phone,
                   title: "Phone Numbers",
-                  content: "+44 7700 144320 (Main Office)\n+1 979 618 8876 (US Office)\n+44 7700 144320 (Mobile)",
+                  content: "+44 7700 144320 (UK Office)\n+1 979 618 8876 (US Office)\n+44 7700 144320 (WhatsApp)",
                 },
                 {
                   icon: Mail,
@@ -510,7 +551,7 @@ export default function HomePage() {
                 {
                   icon: Building2,
                   title: "Banking & Legal",
-                  content: "Banking: Barclays Bank PLC (London)\nLegal: Clifford Chance LLP\nSolicitor: Senior Partner",
+                  content: "Banking: HSBC bank (London)\nLegal: Clifford Chance LLP\nSolicitor: Senior Partner",
                 },
               ].map((contact, index) => (
                 <Card key={index} className="p-4 sm:p-6 hover:shadow-lg transition-shadow">
@@ -527,14 +568,9 @@ export default function HomePage() {
                   </div>
                 </Card>
               ))}
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <Card className="p-6 sm:p-8 border-2">
                 <CardHeader className="pb-4 sm:pb-6 px-0">
                   <CardTitle className="text-xl sm:text-2xl font-heading font-bold">Get in Touch</CardTitle>
@@ -596,7 +632,7 @@ export default function HomePage() {
                   </Button>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

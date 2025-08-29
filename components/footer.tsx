@@ -120,7 +120,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-medium text-foreground">Banking Partner</p>
-                <p>Barclays Bank PLC</p>
+                <p>HSBC bank</p>
                 <p>London, UK</p>
               </div>
             </div>
