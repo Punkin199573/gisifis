@@ -5,7 +5,7 @@
 @layer base {
   :root {
     /* Updated to match the new GSFS logo's blue network theme with sophisticated navy and cyan colors */
-    --background: 0 0% 100%;
+    --background: 220 20% 98%; /* Changed from pure white to very light blue-gray */
     --foreground: 220 15% 20%;
     --card: 0 0% 100%;
     --card-foreground: 220 15% 20%;
@@ -87,6 +87,11 @@
 
   body {
     @apply bg-background text-foreground;
+    /* Added subtle gradient background pattern */
+    background-image: radial-gradient(circle at 25% 25%, hsl(220 20% 96%) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(195 30% 97%) 0%, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 
   /* Updated font classes to use the proper font variables from layout.tsx */
@@ -124,4 +129,17 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-primary/40;
+}
+
+/* Added section background variations for visual interest */
+.section-alternate {
+  background: linear-gradient(135deg, hsl(220 30% 99%) 0%, hsl(195 20% 98%) 100%);
+}
+
+.section-primary {
+  background: linear-gradient(135deg, hsl(220 100% 20%) 0%, hsl(210 100% 25%) 100%);
+}
+
+.section-accent {
+  background: linear-gradient(135deg, hsl(195 100% 96%) 0%, hsl(220 30% 98%) 100%);
 }
