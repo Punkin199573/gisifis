@@ -168,7 +168,7 @@ export default function HomePage() {
                 variant="secondary"
                 className="mb-6 px-4 sm:px-6 py-2 text-xs sm:text-sm font-semibold bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20"
               >
-                GSFS • UK Financial Services • Company No: 12345678
+                GSFS • UK Financial Services • Company
               </Badge>
             </div>
 
@@ -257,7 +257,7 @@ export default function HomePage() {
                 title: "Fiduciary & Trust Services",
                 description:
                   "Comprehensive trust services and fiduciary management with the highest governance standards.",
-                features: ["Delaware Statutory Trust", "Asset Protection", "Estate Planning"],
+                features: ["London Statutory Trust", "Asset Protection", "Estate Planning"],
               },
               {
                 icon: Banknote,
@@ -420,12 +420,11 @@ export default function HomePage() {
               </p>
               <div className="space-y-4 sm:space-y-6">
                 {[
-                  "UK Financial Services Company (No: 12345678)",
+                  "UK Financial Services Company",
                   "FCA Regulated Investment Company with full compliance",
                   "Serving HNWI, Accredited & Sophisticated Investors",
                   "Global operations: UK and international markets",
                   "Banking partnership with HSBC bank",
-                  "Legal counsel: Clifford Chance LLP",
                   "Anti-Money Laundering compliance (UK MLR 2017)",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3 sm:gap-4">
@@ -546,12 +545,12 @@ export default function HomePage() {
                 {
                   icon: Mail,
                   title: "Email Addresses",
-                  content: "office@gsfs.co.uk (General)\ninfo@gsfs.co.uk (Information)\nsupport@gsfs.co.uk (Support)",
+                  content: "info@gsfs.co.uk (General)\nsupport@gsfs.co.uk (Information)\nsupport@gsfs.co.uk (Support)",
                 },
                 {
                   icon: Building2,
                   title: "Banking & Legal",
-                  content: "Banking: HSBC bank (London)\nLegal: Clifford Chance LLP\nSolicitor: Senior Partner",
+                  content: "Banking: HSBC bank (London)\nSolicitor: Senior Partner",
                 },
               ].map((contact, index) => (
                 <Card key={index} className="p-4 sm:p-6 hover:shadow-lg transition-shadow">

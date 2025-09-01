@@ -29,14 +29,14 @@ export default function Footer() {
             </p>
             <div className="text-sm text-muted-foreground space-y-2">
               <p className="font-semibold mb-2">Corporate Information:</p>
-              <p>UK Financial Services Company • No: 12345678</p>
+              <p>UK Financial Services Company</p>
               <p>FCA Regulated Investment Company</p>
               <p>Services for HNWI, Sophisticated Investors & Institutions</p>
               <div className="mt-4 space-y-1">
                 <p className="font-medium">Corporate Office:</p>
                 <p>1 Canary Wharf, London E14 5AB</p>
                 <p>Phone: +44 7700 144320</p>
-                <p>Email: office@gsfs.co.uk</p>
+                <p>Email: info@gsfs.co.uk</p>
               </div>
             </div>
           </div>
@@ -130,7 +130,6 @@ export default function Footer() {
           <div className="grid gap-6 md:grid-cols-2 text-sm text-muted-foreground">
             <div>
               <p className="font-medium text-foreground mb-2">Legal & Compliance</p>
-              <p>Legal Counsel: Clifford Chance LLP</p>
               <p>Solicitor: Senior Partner</p>
               <p>Anti-Money Laundering Compliance (UK MLR 2017)</p>
             </div>
