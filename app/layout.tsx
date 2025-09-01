@@ -154,7 +154,18 @@ export default function RootLayout({
                         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
                         position: relative;
                       ">
-                        <div style="position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; border-radius: 4px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 6px; background: linear-gradient(to bottom, #012169 0%, #012169 33%, white 33%, white 66%, #C8102E 66%);"></div>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 50%; background: #012169;"></div>
+                        <div style="position: absolute; top: 50%; left: 0; right: 0; height: 50%; background: #C8102E;"></div>
+                        <div style="position: absolute; top: 0; left: 0; width: 40%; height: 50%; background: #012169;"></div>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: white; transform: rotate(26.57deg); transform-origin: 0 0;"></div>
+                        <div style="position: absolute; top: 0; right: 0; left: 0; height: 2px; background: white; transform: rotate(-26.57deg); transform-origin: 100% 0;"></div>
+                        <div style="position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: white; transform: translateY(-1px);"></div>
+                        <div style="position: absolute; top: 0; left: 50%; bottom: 0; width: 2px; background: white; transform: translateX(-1px);"></div>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: #C8102E; transform: rotate(26.57deg); transform-origin: 0 0;"></div>
+                        <div style="position: absolute; top: 0; right: 0; left: 0; height: 1px; background: #C8102E; transform: rotate(-26.57deg); transform-origin: 100% 0;"></div>
+                        <div style="position: absolute; top: 50%; left: 0; right: 0; height: 4px; background: #C8102E; transform: translateY(-2px);"></div>
+                        <div style="position: absolute; top: 0; left: 50%; bottom: 0; width: 4px; background: #C8102E; transform: translateX(-2px);"></div>
                       </div>
                       <div>
                         <div style="font-weight: 800; font-size: 16px; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
@@ -186,15 +197,7 @@ export default function RootLayout({
                         flex-shrink: 0;
                         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
                       ">
-                        <div style="
-                          position: absolute;
-                          top: 0;
-                          left: 0;
-                          width: 40%;
-                          height: 53.85%;
-                          background: #3C3B6E;
-                          border-radius: 6px 0 0 0;
-                        "></div>
+                        <div style="position: absolute; top: 0; left: 0; width: 40%; height: 53.85%; background: #3C3B6E; border-radius: 6px 0 0 0;"></div>
                         <div style="position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; border-radius: 4px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
                       </div>
                       <div>

@@ -143,7 +143,7 @@ export default function Footer() {
           </div>
           <div className="text-center mt-8 pt-6 border-t">
             <p className="text-sm text-muted-foreground">
-              © 2025 Global Strategic Financial Solutions (GSFS). All rights reserved. Part of the Global Financial
+              © 2003 Global Strategic Financial Solutions (GSFS). All rights reserved. Part of the Global Financial
               Consortium.
             </p>
           </div>
