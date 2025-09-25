@@ -15,6 +15,8 @@ const nextConfig = {
       allowedOrigins: ["*"],
     },
   },
+  // Allow cross-origin requests for Replit development environment
+  allowedDevOrigins: ["*"],
   // Allow all hosts for Replit proxy compatibility
   async headers() {
     return [
