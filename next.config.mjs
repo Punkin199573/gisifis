@@ -9,6 +9,26 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Configure for Replit environment
+  experimental: {
+    serverActions: {
+      allowedOrigins: ["*"],
+    },
+  },
+  // Allow all hosts for Replit proxy compatibility
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+        ],
+      },
+    ]
+  },
 }
 
 export default nextConfig
