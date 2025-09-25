@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ArrowRight, Phone, Mail, MapPin, Clock, Globe, Building2, Users, MessageSquare, Calendar } from "lucide-react"
+import { ArrowRight, Phone, Mail, MapPin, Clock, Globe, Building2, Users, MessageSquare, Calendar, Loader2, CheckCircle, AlertCircle } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import Navigation from "@/components/navigation"
@@ -27,6 +27,101 @@ export default function ContactPage() {
     preferredContact: "",
     urgency: "",
   })
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
+
+  const validateForm = () => {
+    return !!(formData.firstName && formData.lastName && formData.email && formData.serviceInterest && formData.message)
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!validateForm()) {
+      setSubmitError("Please fill in all required fields.")
+      return
+    }
+
+    setIsSubmitting(true)
+    setSubmitError(null)
+
+    try {
+      const response = await fetch('/api/applications', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'contact',
+          data: formData
+        }),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitSuccess(true)
+      } else {
+        setSubmitError(result.error || 'Failed to send message')
+      }
+    } catch (error) {
+      setSubmitError('An unexpected error occurred. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  if (submitSuccess) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Navigation currentPage="/contact" />
+        <div className="container py-24">
+          <div className="max-w-2xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="h-20 w-20 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center">
+                <CheckCircle className="h-10 w-10 text-green-600" />
+              </div>
+              <h1 className="text-4xl font-heading font-black mb-4">Message Sent Successfully!</h1>
+              <p className="text-lg text-muted-foreground mb-8">
+                Thank you for contacting GSFS. We have received your message and will respond within 4 hours.
+                You will receive an email confirmation shortly at {formData.email}.
+              </p>
+              <div className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  <strong>Next steps:</strong>
+                </p>
+                <ul className="text-left max-w-md mx-auto space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Your inquiry has been routed to the appropriate specialist
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Initial response within 4 hours
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    Personalized consultation scheduling available
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-8">
+                <Button size="lg" className="bg-gradient-to-r from-primary to-secondary" onClick={() => window.location.href = '/'}>
+                  Return to Home
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   const offices = [
     {
@@ -483,9 +578,29 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <Button className="w-full h-12 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
-                    Send Message
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  {submitError && (
+                    <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 mb-4">
+                      <AlertCircle className="h-4 w-4" />
+                      <span className="text-sm">{submitError}</span>
+                    </div>
+                  )}
+
+                  <Button 
+                    onClick={handleSubmit}
+                    disabled={!validateForm() || isSubmitting}
+                    className="w-full h-12 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending Message...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </>
+                    )}
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
