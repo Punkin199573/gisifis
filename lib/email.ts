@@ -20,8 +20,8 @@ export async function sendApplicationNotification({ type, data, applicationId }:
     const htmlContent = generateEmailContent(type, data, applicationId)
     
     const result = await resend.emails.send({
-      from: 'Stable Value Capital <noreply@stablevaluecapital.co.uk>',
-      to: ['info@stablevaluecapital.co.uk'],
+      from: 'Stable Value Capital <noreply@stablevaluecapital.com>',
+      to: ['info@stablevaluecapital.com'],
       subject,
       html: htmlContent,
     })

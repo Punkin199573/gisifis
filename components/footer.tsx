@@ -35,7 +35,7 @@ export default function Footer() {
                 <p className="font-medium">Contact:</p>
                 <p>London, United Kingdom</p>
                 <p>Phone: +44 7700 144320</p>
-                <p>Email: info@stablevaluecapital.co.uk</p>
+                <p>Email: info@stablevaluecapital.com</p>
               </div>
             </div>
           </div>
