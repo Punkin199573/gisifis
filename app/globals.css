@@ -4,81 +4,81 @@
 
 @layer base {
   :root {
-    /* Updated to match the new GSFS logo's blue network theme with sophisticated navy and cyan colors */
-    --background: 220 25% 92%; /* Made background darker from 96% to 92% */
-    --foreground: 220 15% 20%;
-    --card: 220 15% 98%; /* Added slight blue tint to cards */
-    --card-foreground: 220 15% 20%;
-    --popover: 220 15% 98%;
-    --popover-foreground: 220 15% 20%;
-    --primary: 220 100% 20%; /* Deep Navy Blue matching logo background */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 195 100% 50%; /* Bright Cyan matching logo network lines */
-    --secondary-foreground: 220 100% 20%;
-    --muted: 220 25% 88%; /* Made muted areas darker from 95% to 88% */
-    --muted-foreground: 220 15% 40%;
-    --accent: 195 100% 50%; /* Bright Cyan accent */
-    --accent-foreground: 220 100% 20%;
+    /* Bright Futuristic Design - Electric Blue & Vibrant Cyan */
+    --background: 0 0% 98%; /* Almost white, very subtle gray */
+    --foreground: 220 25% 12%; /* Deep navy text */
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 220 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+    --primary: 212 100% 50%; /* Electric Blue #0066FF */
+    --primary-foreground: 0 0% 100%; /* White text on blue */
+    --secondary: 180 100% 50%; /* Vibrant Cyan #00FFFF */
+    --secondary-foreground: 220 25% 12%; /* Navy text */
+    --muted: 0 0% 88%; /* Light gray muted */
+    --muted-foreground: 220 10% 45%; /* Medium gray text */
+    --accent: 268 100% 50%; /* Vibrant Purple accent */
+    --accent-foreground: 0 0% 100%; /* White text */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 25% 85%; /* Made borders more visible */
-    --input: 220 10% 99%;
-    --ring: 195 100% 50%;
-    --chart-1: 220 100% 20%;
-    --chart-2: 195 100% 50%;
-    --chart-3: 210 100% 35%;
-    --chart-4: 185 100% 45%;
-    --chart-5: 200 100% 40%;
+    --border: 0 0% 85%; /* Light gray borders */
+    --input: 0 0% 100%; /* White inputs */
+    --ring: 212 100% 50%; /* Electric blue ring */
+    --chart-1: 212 100% 50%;
+    --chart-2: 180 100% 50%;
+    --chart-3: 268 100% 50%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 45 100% 60%;
     --radius: 0.5rem;
-    --sidebar: 220 15% 98%;
-    --sidebar-foreground: 220 15% 20%;
-    --sidebar-primary: 220 100% 20%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 195 100% 50%;
-    --sidebar-accent-foreground: 220 100% 20%;
-    --sidebar-border: 220 25% 85%;
-    --sidebar-ring: 195 100% 50%;
+    --sidebar: 212 100% 50%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 212 100% 50%;
+    --sidebar-accent: 180 100% 50%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 212 80% 40%;
+    --sidebar-ring: 180 100% 50%;
 
-    /* Added proper font family variables to match layout.tsx */
+    /* Font family variables */
     --font-heading: var(--font-montserrat);
     --font-body: var(--font-open-sans);
     --font-sans: var(--font-open-sans);
   }
 
   .dark {
-    /* Updated dark mode to complement the navy/cyan theme */
-    --background: 220 100% 8%; /* Very dark navy */
-    --foreground: 0 0% 95%;
-    --card: 220 100% 10%;
-    --card-foreground: 0 0% 95%;
-    --popover: 220 100% 10%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 195 100% 50%; /* Bright cyan for dark mode primary */
-    --primary-foreground: 220 100% 8%;
-    --secondary: 210 100% 35%; /* Medium blue */
-    --secondary-foreground: 0 0% 95%;
-    --muted: 220 100% 15%;
-    --muted-foreground: 220 20% 70%;
-    --accent: 195 100% 50%;
-    --accent-foreground: 220 100% 8%;
+    /* Dark mode - Deep space with electric blue accents */
+    --background: 220 30% 8%; /* Very dark navy-blue */
+    --foreground: 0 0% 92%; /* Almost white text */
+    --card: 220 30% 12%;
+    --card-foreground: 0 0% 92%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 0 0% 92%;
+    --primary: 212 100% 60%; /* Bright electric blue in dark mode */
+    --primary-foreground: 220 30% 8%;
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 220 30% 8%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 220 10% 65%;
+    --accent: 268 100% 60%;
+    --accent-foreground: 220 30% 8%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 95%;
-    --border: 220 100% 20%;
-    --input: 220 100% 15%;
-    --ring: 195 100% 50%;
-    --chart-1: 195 100% 50%;
-    --chart-2: 210 100% 35%;
-    --chart-3: 185 100% 45%;
-    --chart-4: 200 100% 40%;
-    --chart-5: 220 100% 25%;
-    --sidebar: 220 100% 10%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 220 100% 20%;
-    --sidebar-primary-foreground: 0 0% 95%;
-    --sidebar-accent: 195 100% 50%;
-    --sidebar-accent-foreground: 220 100% 8%;
-    --sidebar-border: 220 100% 20%;
-    --sidebar-ring: 195 100% 50%;
+    --destructive-foreground: 0 0% 92%;
+    --border: 220 30% 20%;
+    --input: 220 30% 15%;
+    --ring: 212 100% 60%;
+    --chart-1: 212 100% 60%;
+    --chart-2: 180 100% 50%;
+    --chart-3: 268 100% 60%;
+    --chart-4: 45 100% 60%;
+    --chart-5: 0 84% 60%;
+    --sidebar: 212 100% 50%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 30% 8%;
+    --sidebar-accent: 268 100% 60%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 212 80% 30%;
+    --sidebar-ring: 180 100% 50%;
   }
 
   * {
@@ -87,11 +87,8 @@
 
   body {
     @apply bg-background text-foreground;
-    /* Enhanced gradient background pattern with deeper colors */
-    background-image: radial-gradient(circle at 25% 25%, hsl(220 30% 88%) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(195 40% 90%) 0%, transparent 50%),
-      linear-gradient(135deg, hsl(220 25% 92%) 0%, hsl(210 30% 88%) 100%);
-    background-attachment: fixed;
+    /* Clean white background with subtle borders */
+    background-color: hsl(0 0% 100%);
     min-height: 100vh;
   }
 
@@ -132,15 +129,80 @@ html {
   @apply bg-primary/40;
 }
 
-/* Enhanced section background variations with deeper colors */
+/* Section background variations */
 .section-alternate {
-  background: linear-gradient(135deg, hsl(220 35% 94%) 0%, hsl(195 25% 92%) 100%);
+  @apply bg-gradient-to-br from-blue-50 via-cyan-50 to-purple-50;
 }
 
 .section-primary {
-  background: linear-gradient(135deg, hsl(220 100% 20%) 0%, hsl(210 100% 25%) 100%);
+  @apply bg-gradient-to-r from-primary to-accent text-primary-foreground;
 }
 
 .section-accent {
-  background: linear-gradient(135deg, hsl(195 100% 94%) 0%, hsl(220 35% 92%) 100%);
+  @apply bg-gradient-to-r from-secondary to-primary text-secondary-foreground;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(212 100% 50%) 0%, hsl(180 100% 50%) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.5);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
 }

@@ -177,7 +177,7 @@ export default function WealthManagementPage() {
                   "Sophisticated Investors (International) - Professional investment experience",
                   "Qualified Institutional Buyers (QIBs) - $100M+ in securities",
                   "Minimum Investment Threshold: $1M USD per unit",
-                  "All transactions secured at GSFS Fiduciary & Trust Facilities",
+                  "All transactions secured at Stable Value Capital Fiduciary & Trust Facilities",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />

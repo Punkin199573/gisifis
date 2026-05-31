@@ -18,9 +18,9 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Global Strategic Financial Solutions - Premium Investment & Loan Services",
+  title: "Stable Value Capital - Strategic Investment & Capital Management",
   description:
-    "Ultra-premium financial services platform offering sophisticated investment opportunities, business loans, and wealth management solutions for high-net-worth individuals and institutions.",
+    "Premium wealth management and capital allocation solutions for discerning investors and institutions. Expert portfolio management, strategic investments, and comprehensive financial advisory services.",
   generator: "v0.app",
 }
 

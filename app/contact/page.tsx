@@ -89,7 +89,7 @@ export default function ContactPage() {
               </div>
               <h1 className="text-4xl font-heading font-black mb-4">Message Sent Successfully!</h1>
               <p className="text-lg text-muted-foreground mb-8">
-                Thank you for contacting GSFS. We have received your message and will respond within 4 hours.
+                Thank you for contacting Stable Value Capital. We have received your message and will respond within 24 hours.
                 You will receive an email confirmation shortly at {formData.email}.
               </p>
               <div className="space-y-4">
@@ -129,7 +129,7 @@ export default function ContactPage() {
       country: "United States",
       address: "3123 CloverBank Road, Hamburg, NY 14075",
       phone: "+1 979 618 8876",
-      email: "info@gsfs.co.uk",
+      email: "info@stablevaluecapital.com",
       timezone: "EST (UTC-5)",
       hours: "9:00 AM - 6:00 PM",
       icon: Building2,
@@ -139,7 +139,7 @@ export default function ContactPage() {
       country: "United Kingdom",
       address: "1 Canary Wharf, London E14 5AB",
       phone: "+44 7700 144320",
-      email: "info@gsfs.co.uk",
+      email: "info@stablevaluecapital.com",
       timezone: "GMT (UTC+0)",
       hours: "9:00 AM - 5:30 PM",
       icon: Building2,
@@ -149,7 +149,7 @@ export default function ContactPage() {
       country: "United Arab Emirates",
       address: "Digital Park - Building A1, Silicon Oasis",
       phone: "+44 7700 144320",
-      email: "support@gsfs.co.uk",
+      email: "support@stablevaluecapital.com",
       timezone: "GST (UTC+4)",
       hours: "9:00 AM - 6:00 PM",
       icon: Building2,

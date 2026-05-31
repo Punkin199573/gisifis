@@ -74,7 +74,7 @@ export default function PrivatePlacementsPage() {
                   "SEC approved Private Placement Memorandum (PPM)",
                   "Minimum investment: $1M USD per unit",
                   "Eligible for Accredited and Sophisticated Investors",
-                  "All transactions secured at GSFS Fiduciary & Trust Facilities",
+                  "All transactions secured at Stable Value Capital Fiduciary & Trust Facilities",
                   "Expansion opportunities from $5M USD using Promissory Notes",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4">

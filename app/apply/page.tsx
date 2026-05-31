@@ -86,7 +86,7 @@ export default function ApplyPage() {
     {
       step: "05",
       title: "Approval & Execution",
-      description: "Upon approval, execute agreements and begin your financial journey with GSFS",
+      description: "Upon approval, execute agreements and begin your financial journey with Stable Value Capital",
       icon: Award,
     },
   ]
@@ -128,7 +128,7 @@ export default function ApplyPage() {
         <div className="container flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
             <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-              <span className="text-primary-foreground font-bold text-lg">GSFS</span>
+              <span className="text-primary-foreground font-bold text-lg">Stable Value Capital</span>
             </div>
             <div>
               <span className="font-heading font-black text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -173,7 +173,7 @@ export default function ApplyPage() {
               <span className="text-foreground">Premium Services</span>
             </h1>
             <p className="text-xl md:text-2xl leading-relaxed text-muted-foreground text-pretty mb-12">
-              Begin your journey with GSFS by selecting the appropriate application for your investment objectives and
+              Begin your journey with Stable Value Capital by selecting the appropriate application for your investment objectives and
               financial requirements.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
@@ -402,7 +402,7 @@ export default function ApplyPage() {
             <div className="lg:col-span-2">
               <Link href="/" className="flex items-center space-x-3 mb-6">
                 <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                  <span className="text-primary-foreground font-bold text-lg">GSFS</span>
+                  <span className="text-primary-foreground font-bold text-lg">Stable Value Capital</span>
                 </div>
                 <div>
                   <span className="font-heading font-black text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -416,7 +416,7 @@ export default function ApplyPage() {
                 worldwide.
               </p>
               <div className="text-sm text-muted-foreground">
-                <p className="mb-2">© 2024 Global Strategic Financial Solutions Ltd.</p>
+                <p className="mb-2">© 2024 Stable Value Capital Ltd.</p>
                 <p>Regulated by the Financial Conduct Authority (FCA)</p>
               </div>
             </div>
