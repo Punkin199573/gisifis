@@ -2,46 +2,54 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// Service role client for admin operations
+export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
 // Database types
 export interface NewsletterSubscriber {
   id: string;
   email: string;
+  status: 'active' | 'unsubscribed';
   subscribed_at: string;
-  active: boolean;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface FormSubmission {
   id: string;
-  name: string;
+  first_name: string;
+  last_name: string;
   email: string;
   phone?: string;
+  subject?: string;
   message: string;
-  type: 'contact' | 'inquiry' | 'loan';
-  submitted_at: string;
-  status: 'new' | 'read' | 'responded';
+  status: 'new' | 'reviewing' | 'responded';
+  created_at: string;
+  updated_at: string;
+}
+
+export interface NewsletterCampaign {
+  id: string;
+  title: string;
+  content: string;
+  html_content?: string;
+  status: 'draft' | 'scheduled' | 'sent';
+  sent_at?: string;
+  recipient_count: number;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface AdminUser {
   id: string;
-  username: string;
-  password_hash: string;
+  email: string;
+  is_active: boolean;
   created_at: string;
-  last_login?: string;
-}
-
-// Initialize Supabase tables (can be called from admin)
-export async function initializeTables() {
-  try {
-    // Create newsletter_subscribers table
-    await supabase.rpc('create_tables_if_not_exists');
-    return { success: true };
-  } catch (error) {
-    console.error('[v0] Error initializing tables:', error);
-    return { success: false, error };
-  }
+  updated_at: string;
 }
 
 // Newsletter functions
@@ -52,8 +60,8 @@ export async function addNewsletterSubscriber(email: string) {
       .insert([
         {
           email,
+          status: 'active',
           subscribed_at: new Date().toISOString(),
-          active: true,
         },
       ])
       .select();
@@ -71,7 +79,7 @@ export async function getNewsletterSubscribers() {
     const { data, error } = await supabase
       .from('newsletter_subscribers')
       .select('*')
-      .eq('active', true)
+      .eq('status', 'active')
       .order('subscribed_at', { ascending: false });
 
     if (error) throw error;
@@ -82,15 +90,30 @@ export async function getNewsletterSubscribers() {
   }
 }
 
+export async function unsubscribeFromNewsletter(email: string) {
+  try {
+    const { data, error } = await supabase
+      .from('newsletter_subscribers')
+      .update({ status: 'unsubscribed' })
+      .eq('email', email)
+      .select();
+
+    if (error) throw error;
+    return { success: true, data };
+  } catch (error) {
+    console.error('[v0] Error unsubscribing:', error);
+    return { success: false, error };
+  }
+}
+
 // Form submission functions
-export async function addFormSubmission(submission: Omit<FormSubmission, 'id' | 'submitted_at' | 'status'>) {
+export async function addFormSubmission(submission: Omit<FormSubmission, 'id' | 'created_at' | 'updated_at' | 'status'>) {
   try {
     const { data, error } = await supabase
       .from('form_submissions')
       .insert([
         {
           ...submission,
-          submitted_at: new Date().toISOString(),
           status: 'new',
         },
       ])
@@ -109,7 +132,7 @@ export async function getFormSubmissions() {
     const { data, error } = await supabase
       .from('form_submissions')
       .select('*')
-      .order('submitted_at', { ascending: false });
+      .order('created_at', { ascending: false });
 
     if (error) throw error;
     return { success: true, data };
@@ -119,7 +142,7 @@ export async function getFormSubmissions() {
   }
 }
 
-export async function updateSubmissionStatus(id: string, status: FormSubmission['status']) {
+export async function updateSubmissionStatus(id: string, status: 'new' | 'reviewing' | 'responded') {
   try {
     const { data, error } = await supabase
       .from('form_submissions')
@@ -131,6 +154,61 @@ export async function updateSubmissionStatus(id: string, status: FormSubmission[
     return { success: true, data };
   } catch (error) {
     console.error('[v0] Error updating submission:', error);
+    return { success: false, error };
+  }
+}
+
+// Newsletter campaign functions
+export async function createNewsletterCampaign(campaign: Omit<NewsletterCampaign, 'id' | 'created_at' | 'updated_at' | 'sent_at'>) {
+  try {
+    const { data, error } = await supabaseAdmin
+      .from('newsletter_campaigns')
+      .insert([campaign])
+      .select();
+
+    if (error) throw error;
+    return { success: true, data };
+  } catch (error) {
+    console.error('[v0] Error creating campaign:', error);
+    return { success: false, error };
+  }
+}
+
+export async function getNewsletterCampaigns() {
+  try {
+    const { data, error } = await supabaseAdmin
+      .from('newsletter_campaigns')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) throw error;
+    return { success: true, data };
+  } catch (error) {
+    console.error('[v0] Error fetching campaigns:', error);
+    return { success: false, error };
+  }
+}
+
+export async function updateCampaignStatus(id: string, status: 'draft' | 'scheduled' | 'sent', recipientCount?: number) {
+  try {
+    const updateData: any = { status };
+    if (status === 'sent') {
+      updateData.sent_at = new Date().toISOString();
+    }
+    if (recipientCount !== undefined) {
+      updateData.recipient_count = recipientCount;
+    }
+
+    const { data, error } = await supabaseAdmin
+      .from('newsletter_campaigns')
+      .update(updateData)
+      .eq('id', id)
+      .select();
+
+    if (error) throw error;
+    return { success: true, data };
+  } catch (error) {
+    console.error('[v0] Error updating campaign:', error);
     return { success: false, error };
   }
 }

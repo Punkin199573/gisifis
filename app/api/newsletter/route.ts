@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+import { addNewsletterSubscriber } from '@/lib/supabase';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -13,6 +14,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Invalid email address' },
         { status: 400 }
+      );
+    }
+
+    // Save subscriber to Supabase
+    const subscriptionResult = await addNewsletterSubscriber(email);
+    if (!subscriptionResult.success) {
+      return NextResponse.json(
+        { error: 'Failed to save subscription' },
+        { status: 500 }
       );
     }
 
@@ -56,7 +66,7 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { success: true, message: 'Welcome email sent successfully' },
+      { success: true, message: 'Subscription successful' },
       { status: 200 }
     );
   } catch (error) {
