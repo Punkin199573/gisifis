@@ -20,8 +20,8 @@ export async function sendApplicationNotification({ type, data, applicationId }:
     const htmlContent = generateEmailContent(type, data, applicationId)
     
     const result = await resend.emails.send({
-      from: 'GSFS Platform <noreply@gsfs.co.uk>',
-      to: ['info@gsfs.co.uk'],
+      from: 'Stable Value Capital <noreply@stablevaluecapital.co.uk>',
+      to: ['info@stablevaluecapital.co.uk'],
       subject,
       html: htmlContent,
     })
@@ -36,13 +36,13 @@ export async function sendApplicationNotification({ type, data, applicationId }:
 function getEmailSubject(type: string): string {
   switch (type) {
     case 'business_loan':
-      return 'New Business Loan Application - GSFS Platform'
+      return 'New Business Loan Application - Stable Value Capital'
     case 'contact':
-      return 'New Contact Form Submission - GSFS Platform'
+      return 'New Contact Form Submission - Stable Value Capital'
     case 'general_inquiry':
-      return 'New General Inquiry - GSFS Platform'
+      return 'New General Inquiry - Stable Value Capital'
     default:
-      return 'New Application - GSFS Platform'
+      return 'New Application - Stable Value Capital'
   }
 }
 
@@ -66,7 +66,7 @@ function generateEmailContent(type: string, data: Record<string, any>, applicati
     ${baseStyles}
     <div class="container">
       <div class="header">
-        <h1>Global Strategic Financial Solutions</h1>
+        <h1>Stable Value Capital</h1>
         <p style="margin: 10px 0 0 0; opacity: 0.9;">New ${getFormTypeName(type)}</p>
       </div>
       <div class="content">
@@ -87,7 +87,7 @@ function generateEmailContent(type: string, data: Record<string, any>, applicati
       <div class="meta">
         <p><strong>Application ID:</strong> <span class="highlight">${applicationId}</span></p>
         <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
-        <p><strong>Platform:</strong> GSFS Online Application System</p>
+        <p><strong>Platform:</strong> Stable Value Capital</p>
       </div>
     </div>
   `

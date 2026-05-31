@@ -34,23 +34,23 @@ export default function Navigation({ currentPage }: NavigationProps) {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur-xl">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
-          <div className="relative h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0">
+          <div className="relative h-12 w-12 sm:h-14 sm:w-14 flex-shrink-0">
             <Image
-              src="/gsfs-logo.png"
-              alt="Global Strategic Financial Solutions"
+              src="/logo.png"
+              alt="Stable Value Capital"
               fill
               className="object-contain"
               priority
             />
           </div>
           <div className="hidden sm:block">
-            <span className="font-heading font-black text-xl lg:text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Global Strategic
+            <span className="font-heading font-bold text-lg lg:text-xl text-primary">
+              Stable Value
             </span>
-            <div className="text-xs lg:text-sm text-muted-foreground font-medium">Financial Solutions</div>
+            <div className="text-xs lg:text-sm text-muted-foreground font-medium">Capital</div>
           </div>
         </Link>
 
@@ -66,12 +66,12 @@ export default function Navigation({ currentPage }: NavigationProps) {
               {item.label}
             </Link>
           ))}
-          <Link href="/loans/business-loan-application">
+          <Link href="/contact">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 shadow-lg"
+              className="bg-primary hover:bg-primary/90 text-white shadow-md"
             >
-              Apply for Loan
+              Get Started
             </Button>
           </Link>
         </div>
@@ -97,9 +97,9 @@ export default function Navigation({ currentPage }: NavigationProps) {
                 {item.label}
               </Link>
             ))}
-            <Link href="/loans/business-loan-application" onClick={() => setIsMenuOpen(false)}>
-              <Button size="lg" className="w-full bg-gradient-to-r from-primary to-secondary">
-                Apply for Loan
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-white">
+                Get Started
               </Button>
             </Link>
           </div>

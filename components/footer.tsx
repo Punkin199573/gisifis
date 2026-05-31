@@ -3,40 +3,39 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-muted/30">
+    <footer className="border-t border-gray-200 bg-gray-50">
       <div className="container py-16">
         <div className="grid gap-12 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-6">
               <div className="relative h-12 w-12 flex-shrink-0">
                 <Image
-                  src="/gsfs-logo.png"
-                  alt="Global Strategic Financial Solutions"
+                  src="/logo.png"
+                  alt="Stable Value Capital"
                   fill
                   className="object-contain"
                 />
               </div>
               <div>
-                <span className="font-heading font-black text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Global Strategic
+                <span className="font-heading font-bold text-xl text-primary">
+                  Stable Value
                 </span>
-                <div className="text-sm text-muted-foreground font-medium">Financial Solutions</div>
+                <div className="text-sm text-muted-foreground font-medium">Capital</div>
               </div>
             </Link>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-              Part of the Global Financial Consortium, providing sophisticated investment opportunities and business
-              financing solutions for discerning clients across the UK and internationally.
+              Strategic capital allocation and investment advisory serving high-net-worth individuals and institutional clients. Comprehensive wealth management and financial solutions for discerning investors.
             </p>
             <div className="text-sm text-muted-foreground space-y-2">
-              <p className="font-semibold mb-2">Corporate Information:</p>
-              <p>UK Financial Services Company</p>
-              <p>FCA Regulated Investment Company</p>
-              <p>Services for HNWI, Sophisticated Investors & Institutions</p>
+              <p className="font-semibold mb-2">About Stable Value Capital:</p>
+              <p>Premium Capital Management Firm</p>
+              <p>Institutional & High-Net-Worth Advisory</p>
+              <p>Serving Global Investors & Institutions</p>
               <div className="mt-4 space-y-1">
-                <p className="font-medium">Corporate Office:</p>
-                <p>1 Canary Wharf, London E14 5AB</p>
+                <p className="font-medium">Contact:</p>
+                <p>London, United Kingdom</p>
                 <p>Phone: +44 7700 144320</p>
-                <p>Email: info@gsfs.co.uk</p>
+                <p>Email: info@stablevaluecapital.co.uk</p>
               </div>
             </div>
           </div>
@@ -143,8 +142,7 @@ export default function Footer() {
           </div>
           <div className="text-center mt-8 pt-6 border-t">
             <p className="text-sm text-muted-foreground">
-              © 2003 Global Strategic Financial Solutions (GSFS). All rights reserved. Part of the Global Financial
-              Consortium.
+              © 2024 Stable Value Capital. All rights reserved. Premium Capital Management Solutions.
             </p>
           </div>
         </div>

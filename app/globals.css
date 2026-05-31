@@ -4,81 +4,81 @@
 
 @layer base {
   :root {
-    /* Updated to match the new GSFS logo's blue network theme with sophisticated navy and cyan colors */
-    --background: 220 25% 92%; /* Made background darker from 96% to 92% */
-    --foreground: 220 15% 20%;
-    --card: 220 15% 98%; /* Added slight blue tint to cards */
-    --card-foreground: 220 15% 20%;
-    --popover: 220 15% 98%;
-    --popover-foreground: 220 15% 20%;
-    --primary: 220 100% 20%; /* Deep Navy Blue matching logo background */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 195 100% 50%; /* Bright Cyan matching logo network lines */
-    --secondary-foreground: 220 100% 20%;
-    --muted: 220 25% 88%; /* Made muted areas darker from 95% to 88% */
-    --muted-foreground: 220 15% 40%;
-    --accent: 195 100% 50%; /* Bright Cyan accent */
-    --accent-foreground: 220 100% 20%;
+    /* Corporate Minimalist Navy & White - Stable Value Capital Branding */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 220 20% 15%; /* Navy text */
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 220 20% 15%; /* Navy text on cards */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+    --primary: 220 40% 20%; /* Deep navy primary #001F3F */
+    --primary-foreground: 0 0% 100%; /* White text on navy */
+    --secondary: 0 0% 93%; /* Light gray secondary */
+    --secondary-foreground: 220 20% 15%; /* Navy text */
+    --muted: 0 0% 90%; /* Very light gray muted */
+    --muted-foreground: 220 15% 50%; /* Medium gray text */
+    --accent: 220 60% 35%; /* Medium navy accent */
+    --accent-foreground: 0 0% 100%; /* White text */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 25% 85%; /* Made borders more visible */
-    --input: 220 10% 99%;
-    --ring: 195 100% 50%;
-    --chart-1: 220 100% 20%;
-    --chart-2: 195 100% 50%;
-    --chart-3: 210 100% 35%;
-    --chart-4: 185 100% 45%;
-    --chart-5: 200 100% 40%;
-    --radius: 0.5rem;
-    --sidebar: 220 15% 98%;
-    --sidebar-foreground: 220 15% 20%;
-    --sidebar-primary: 220 100% 20%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 195 100% 50%;
-    --sidebar-accent-foreground: 220 100% 20%;
-    --sidebar-border: 220 25% 85%;
-    --sidebar-ring: 195 100% 50%;
+    --border: 0 0% 90%; /* Light gray borders */
+    --input: 0 0% 100%; /* White inputs */
+    --ring: 220 40% 20%; /* Navy ring */
+    --chart-1: 220 40% 20%;
+    --chart-2: 220 30% 35%;
+    --chart-3: 220 20% 50%;
+    --chart-4: 0 0% 80%;
+    --chart-5: 0 0% 60%;
+    --radius: 0.375rem;
+    --sidebar: 220 40% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 220 40% 20%;
+    --sidebar-accent: 220 60% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 20% 40%;
+    --sidebar-ring: 220 40% 20%;
 
-    /* Added proper font family variables to match layout.tsx */
+    /* Font family variables */
     --font-heading: var(--font-montserrat);
     --font-body: var(--font-open-sans);
     --font-sans: var(--font-open-sans);
   }
 
   .dark {
-    /* Updated dark mode to complement the navy/cyan theme */
-    --background: 220 100% 8%; /* Very dark navy */
-    --foreground: 0 0% 95%;
-    --card: 220 100% 10%;
+    /* Dark mode - Corporate Navy background */
+    --background: 220 40% 10%; /* Very dark navy */
+    --foreground: 0 0% 95%; /* Off-white text */
+    --card: 220 35% 15%;
     --card-foreground: 0 0% 95%;
-    --popover: 220 100% 10%;
+    --popover: 220 35% 15%;
     --popover-foreground: 0 0% 95%;
-    --primary: 195 100% 50%; /* Bright cyan for dark mode primary */
-    --primary-foreground: 220 100% 8%;
-    --secondary: 210 100% 35%; /* Medium blue */
+    --primary: 0 0% 95%; /* Off-white primary in dark mode */
+    --primary-foreground: 220 40% 10%;
+    --secondary: 220 30% 25%;
     --secondary-foreground: 0 0% 95%;
-    --muted: 220 100% 15%;
+    --muted: 220 30% 20%;
     --muted-foreground: 220 20% 70%;
-    --accent: 195 100% 50%;
-    --accent-foreground: 220 100% 8%;
+    --accent: 220 60% 50%;
+    --accent-foreground: 220 40% 10%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 95%;
-    --border: 220 100% 20%;
-    --input: 220 100% 15%;
-    --ring: 195 100% 50%;
-    --chart-1: 195 100% 50%;
-    --chart-2: 210 100% 35%;
-    --chart-3: 185 100% 45%;
-    --chart-4: 200 100% 40%;
-    --chart-5: 220 100% 25%;
-    --sidebar: 220 100% 10%;
+    --border: 220 35% 25%;
+    --input: 220 35% 15%;
+    --ring: 0 0% 95%;
+    --chart-1: 0 0% 95%;
+    --chart-2: 220 30% 35%;
+    --chart-3: 220 20% 50%;
+    --chart-4: 220 40% 20%;
+    --chart-5: 220 30% 25%;
+    --sidebar: 220 40% 10%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 220 100% 20%;
-    --sidebar-primary-foreground: 0 0% 95%;
-    --sidebar-accent: 195 100% 50%;
-    --sidebar-accent-foreground: 220 100% 8%;
-    --sidebar-border: 220 100% 20%;
-    --sidebar-ring: 195 100% 50%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 220 40% 10%;
+    --sidebar-accent: 220 60% 50%;
+    --sidebar-accent-foreground: 220 40% 10%;
+    --sidebar-border: 220 30% 30%;
+    --sidebar-ring: 0 0% 95%;
   }
 
   * {
@@ -87,11 +87,8 @@
 
   body {
     @apply bg-background text-foreground;
-    /* Enhanced gradient background pattern with deeper colors */
-    background-image: radial-gradient(circle at 25% 25%, hsl(220 30% 88%) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(195 40% 90%) 0%, transparent 50%),
-      linear-gradient(135deg, hsl(220 25% 92%) 0%, hsl(210 30% 88%) 100%);
-    background-attachment: fixed;
+    /* Clean white background with subtle borders */
+    background-color: hsl(0 0% 100%);
     min-height: 100vh;
   }
 
@@ -132,15 +129,15 @@ html {
   @apply bg-primary/40;
 }
 
-/* Enhanced section background variations with deeper colors */
+/* Section background variations */
 .section-alternate {
-  background: linear-gradient(135deg, hsl(220 35% 94%) 0%, hsl(195 25% 92%) 100%);
+  @apply bg-gray-50;
 }
 
 .section-primary {
-  background: linear-gradient(135deg, hsl(220 100% 20%) 0%, hsl(210 100% 25%) 100%);
+  @apply bg-primary text-primary-foreground;
 }
 
 .section-accent {
-  background: linear-gradient(135deg, hsl(195 100% 94%) 0%, hsl(220 35% 92%) 100%);
+  @apply bg-secondary text-secondary-foreground;
 }

@@ -127,7 +127,7 @@ export default function ApplicationsPage() {
               Applications Dashboard
             </h1>
             <p className="text-lg text-muted-foreground">
-              Manage and review all submissions from the GSFS platform
+              Manage and review all submissions from the Stable Value Capital platform
             </p>
           </div>
 

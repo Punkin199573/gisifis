@@ -30,7 +30,7 @@ export default function TestimonialsPage() {
       service: "Project Funding",
       amount: "$50M",
       content:
-        "GSFS provided the sophisticated financing structure we needed for our $50M expansion into Southeast Asian markets. Their expertise in credit enhancement made what seemed impossible, possible. The team's deep understanding of international regulations and their extensive network of institutional partners was instrumental in securing favorable terms that traditional banks couldn't match.",
+        "Stable Value Capital provided the sophisticated financing structure we needed for our $50M expansion into Southeast Asian markets. Their expertise in credit enhancement made what seemed impossible, possible. The team's deep understanding of international regulations and their extensive network of institutional partners was instrumental in securing favorable terms that traditional banks couldn't match.",
       results: ["50% faster funding process", "2.3% lower interest rates", "Global market expansion achieved"],
       rating: 5,
       featured: true,
@@ -44,7 +44,7 @@ export default function TestimonialsPage() {
       service: "Wealth Management",
       amount: "$25M",
       content:
-        "The wealth management team at GSFS has consistently delivered exceptional returns through their private placement opportunities. Their sophisticated approach to portfolio diversification and risk management has outperformed our previous advisors by significant margins. The level of personalized service and attention to detail is truly world-class.",
+        "The wealth management team at Stable Value Capital has consistently delivered exceptional returns through their private placement opportunities. Their sophisticated approach to portfolio diversification and risk management has outperformed our previous advisors by significant margins. The level of personalized service and attention to detail is truly world-class.",
       results: ["18.7% annual returns", "35% portfolio diversification", "Risk reduction of 40%"],
       rating: 5,
       featured: true,
@@ -61,7 +61,7 @@ export default function TestimonialsPage() {
       service: "Credit Enhancement",
       amount: "$15M",
       content:
-        "From initial consultation to project completion, GSFS demonstrated unparalleled professionalism and delivered results that exceeded our expectations. Their credit enhancement strategies helped us secure FDA approval funding at terms we never thought possible.",
+        "From initial consultation to project completion, Stable Value Capital demonstrated unparalleled professionalism and delivered results that exceeded our expectations. Their credit enhancement strategies helped us secure FDA approval funding at terms we never thought possible.",
       results: ["FDA approval secured", "30% cost savings", "6-month timeline acceleration"],
       rating: 5,
     },
@@ -100,7 +100,7 @@ export default function TestimonialsPage() {
       service: "International Financing",
       amount: "$75M",
       content:
-        "GSFS structured a complex international financing deal that other firms couldn't handle. Their global expertise and regulatory knowledge across multiple jurisdictions is unmatched in the industry.",
+        "Stable Value Capital structured a complex international financing deal that other firms couldn't handle. Their global expertise and regulatory knowledge across multiple jurisdictions is unmatched in the industry.",
       results: ["Multi-jurisdiction compliance", "Currency risk mitigation", "Accelerated expansion"],
       rating: 5,
     },
@@ -126,7 +126,7 @@ export default function TestimonialsPage() {
       service: "Islamic Finance",
       amount: "$60M",
       content:
-        "GSFS's understanding of Sharia-compliant financing structures is exceptional. They successfully structured our real estate development project while maintaining full compliance with Islamic banking principles.",
+        "Stable Value Capital's understanding of Sharia-compliant financing structures is exceptional. They successfully structured our real estate development project while maintaining full compliance with Islamic banking principles.",
       results: ["Sharia compliance achieved", "Regulatory approval", "Community development"],
       rating: 5,
     },
@@ -192,7 +192,7 @@ export default function TestimonialsPage() {
               <span className="text-foreground">Global Leaders</span>
             </h1>
             <p className="text-xl md:text-2xl leading-relaxed text-muted-foreground text-pretty mb-12">
-              Discover how GSFS has helped sophisticated investors, entrepreneurs, and institutions achieve their
+              Discover how Stable Value Capital has helped sophisticated investors, entrepreneurs, and institutions achieve their
               financial objectives through our premium services and expertise.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">

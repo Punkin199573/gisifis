@@ -894,7 +894,7 @@ export default function BusinessLoanApplicationPage() {
                             onCheckedChange={(checked) => updateFormData('consentAccepted', checked)}
                           />
                           <label htmlFor="consent" className="text-sm leading-relaxed">
-                            I consent to GSFS obtaining my credit report and verifying the information provided in this
+                            I consent to Stable Value Capital obtaining my credit report and verifying the information provided in this
                             application.
                           </label>
                         </div>
